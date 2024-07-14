@@ -24,7 +24,7 @@ jobs:
       - name: Deploy Storybook
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          install_command: cd ./packages/docs & npm install
+          install_command: npm install
           build_command: npm run build
-          path: storybook-static
+          path: ./packages/docs/storybook-static
           checkout: false
