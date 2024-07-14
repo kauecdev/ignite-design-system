@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+environment:
+  name: github-pages
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
