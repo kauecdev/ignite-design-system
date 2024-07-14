@@ -22,10 +22,9 @@ jobs:
       - run: npm run build
 
       - name: Deploy Storybook
-        working-directory: ./packages/docs
         uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          install_command: npm install
+          install_command: cd ./packages/docs & npm install
           build_command: npm run build
           path: storybook-static
           checkout: false
