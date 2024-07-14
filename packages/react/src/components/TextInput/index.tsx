@@ -3,6 +3,8 @@ import { Prefix, TextInputContainer, Input } from './styles'
 
 export interface TextInputProps extends ComponentProps<typeof Input> {
   prefix?: string
+  placeholder?: string
+  disabled?: boolean
 }
 
 export function TextInput({ prefix, ...props }: TextInputProps) {
