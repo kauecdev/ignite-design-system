@@ -23,6 +23,9 @@ jobs:
 
       - name: Deploy Storybook
         working-directory: ./packages/docs
-        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
-        env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          install_command: npm install
+          build_command: npm run build
+          path: storybook-static
+          checkout: false
